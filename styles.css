@@ -1,0 +1,163 @@
+:root {
+  --dark: #374151;
+  --darker: #1F2937;
+  --darkest: #111827;
+  --gray: #787c84;
+  --light: #EEE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image:linear-gradient(to top right, #dbc3dc 0, #c4d7e6 33%, #667cad 33%, #6671ad);
+  color: #FFF;
+}
+
+header {
+  padding: 3rem 1rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 2.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+hr {
+  margin-bottom: 1rem;
+  height: 0.05rem;
+  border-radius: 3rem;
+  background-color: var(--light);
+}
+
+#todo-form {
+  display: flex;
+  padding-left: 0.8rem;
+}
+
+input, button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-todo-input {
+  flex: 1 1 0%;
+  background-color: var(--dark);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+}
+
+#new-todo-input::placeholder {
+  color: var(--gray);
+}
+
+#new-todo-submit {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--light);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#new-todo-submit:hover {
+  opacity: 0.8;
+}
+
+#new-todo-submit:active {
+  opacity: 0.6;
+}
+
+main {
+  flex: 1 1 0%;
+  padding: 1rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.todo-list {
+  padding: 1rem;
+}
+
+.todo-list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 1rem;
+} 
+
+#todos .todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#todos .todo .content {
+  flex: 1 1 0%;
+}
+
+#todos .todo .content .text {
+  color: var(--light);
+  font-size: 1.2rem;
+  width: 100%;
+  display: block;
+  transition: 0.5s;
+}
+
+#todos .todo .content .text:not(:read-only) {
+ color: gray;
+}
+
+#todos .todo .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.todo .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.todo .actions button:hover {
+	opacity: 0.8;
+}
+
+.todo .actions button:active {
+	opacity: 0.6;
+}
+
+.todo .actions .edit-button {
+	color: white;
+}
+
+.todo .actions .delete-button {
+  background-image: linear-gradient(to right, rgb(216, 37, 73), rgb(173, 5, 5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
